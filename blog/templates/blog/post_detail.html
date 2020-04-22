@@ -1,0 +1,56 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success" role="alert">
+            {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <div class="post">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+        {% if user.is_authenticated %}
+        <br>
+        <a class="btn btn-secondary" href="{% url 'post_edit' pk=post.pk %}">Öyle demek istemedim</a>
+        <a class="btn btn-danger" href="{% url 'post_delete' pk=post.pk %}">Bunu ben söylemiş olamam</a>
+
+        {% endif %}
+    </div>
+
+    <br><hr>
+
+    <div class="comments">
+        <h3>Başkaları ne demiş?</h3>
+
+        {% for comment in post.comments.all %}
+        
+        <h4> {{comment.title}} <small> {{comment.created_date|timesince}} ago </small> </h4>
+        <p> {{comment.text}} </p>
+
+        {% endfor %}
+
+    </div>
+
+    <br><hr>
+
+    <div class="add_comment">
+        <h3>Yorum ekle:</h3>
+        <form method = "POST">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <input type="submit" class="btn btn-secondary" value="Ben de konuşcam">
+        </form>
+    
+    </div>
+
+{% endblock %}
