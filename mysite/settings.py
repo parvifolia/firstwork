@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 RECAPTCHA_PUBLIC_KEY = '6Leg9OwUAAAAAKpILcZMgPbj4oY0VCxy2iXfE51h'
 RECAPTCHA_PRIVATE_KEY = '6Leg9OwUAAAAAERmQtFoAl1BTukzUZxn1m5apGT1'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_CONFIGS = {
     'default': {
         #'toolbar': 'full',
