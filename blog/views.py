@@ -4,10 +4,17 @@ from .models import Post,Comment
 from .forms import PostForm,CommentForm
 from django.contrib import messages
 from django.db.models import Q
+from django.core.paginator import Paginator
+
 
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    postspage = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+
+    paginator = Paginator(postspage, 5) # Show 25 contacts per page.
+
+    page_number = request.GET.get('page')
+    posts = paginator.get_page(page_number)
 
     query=request.GET.get('q')
     if query:
