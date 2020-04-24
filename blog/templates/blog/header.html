@@ -21,7 +21,7 @@
       <a class="nav-link" href="{% url 'login' %}">Giriş yapıyım </a>
       <a class="nav-link" href="{% url 'register' %}">Kaydolayım </a>
     {% else %}
-      <a class="nav-link" href="{% url 'logout' %}">Terki diyar </a>
+      <a class="nav-link" href="{% url 'logout' %}">Terk-i diyar</a>
     {% endif %}
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -38,7 +38,7 @@
     </ul>
     <form class="form-inline my-2 my-lg-0 method="GET"">
       <input class="form-control mr-sm-2" type="search" name="q" placeholder="Gel beni" aria-label="Search" value='{{request.GET.q}}'>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">bul beni,bul!</button>
+      <button class="btn btn-outline-dark" type="submit">Bul beni,bul beni,bul!</button>
     </form>
   </div>
 </nav>

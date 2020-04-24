@@ -13,10 +13,10 @@
 
     <div class="post">
         <h1>{{ post.title }}</h1>
-        <p>{{ post.text|safe|linebreaksbr }}</p>
+        <p>{{ post.text|safe|linebreaks }}</p>
         {% if post.published_date %}
-            <div class="date">
-                {{ post.published_date }}
+            <div class="author_and_date">
+                <br><p>Yazar: {{post.author}}  <small> | {{ post.published_date }}</small></p>
             </div>
         {% endif %}
         {% if user.is_authenticated %}
@@ -32,13 +32,19 @@
     <div class="comments">
         <h3>Başkaları ne demiş?</h3>
         <br>
-
-        {% for comment in post.comments.all %}
         
-        <h4> {{comment.title}}  <small> ~ <small>{{comment.created_date|timesince}} ago </small> </small> </h4>
-        <p> {{comment.text}} </p>
+        {% if not post.comments.all %}
+            <p> Buralar çok sessiz... </p>
 
-        {% endfor %}
+        {% else %}
+
+            {% for comment in post.comments.all %}
+            
+            <h5> {{comment.title}}  <small> ~ {{request.user}} | <small>{{comment.created_date|timesince}} ago </small> </small> </h4>
+            <p> {{comment.text}} </p>
+
+            {% endfor %}
+        {% endif %}
 
     </div>
 
