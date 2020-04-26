@@ -1,13 +1,15 @@
 parvifolia/firstwork
-
 personal blog
+<hr>
 online at:
 
-<h5><a href="parvifolia.pythonanywhere.com">parvifolia.pythonanywhere.com</a></h5>
+<h5>parvifolia.pythonanywhere.com</h5>
+<hr>
 
-commits
------ 
-v2.02: requirements.txt added, commit logs rebased<br>
+
+» commits «
+
+v2.02: post_edit problem fixed, new theme compatible with mobil devices<br>
 v2.01: static files bug fixed <br>
 v2.00: We are online at pythonanywhere! Check the link at top the readme, Pagination added <br>
 v1.04: Orange theme applied, comment place updated, a mini downbar added <br>

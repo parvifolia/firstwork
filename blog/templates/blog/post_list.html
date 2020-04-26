@@ -38,7 +38,7 @@
         {% if posts.has_previous %}
 
             <li class="page-item">
-                <a class="btn btn-warning" href="?page={{ posts.previous_page_number }}" >Önceki</a>
+                <a class="btn btn-primary" href="?page={{ posts.previous_page_number }}" >Önceki</a>
             </li>
 
         {% else %}
@@ -48,12 +48,12 @@
         {% endif %}
 
             <span class="current">
-            <h6> | Sayfa {{ posts.number }} / {{ posts.paginator.num_pages }} |  </h6>
+            <h6> | Sayfa {{ posts.number }} / {{ posts.paginator.num_pages }} | </h6>
             </span>
 
         {% if posts.has_next %}
             <li class="page-item">
-                <a class="btn btn-warning" href="?page={{ posts.next_page_number }}" >Sonraki</a>
+                <a class="btn btn-primary" href="?page={{ posts.next_page_number }}" >Sonraki</a>
             </li>
         {% else %}
             <li class="page-item disabled">

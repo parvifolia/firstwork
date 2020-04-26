@@ -1,37 +1,18 @@
 body {
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(74, 141, 141)
 }
 
 h2 a{ 
-    color: orange;
+    color: white;
 }
 
 h6 {
-    color: chocolate;
+    color: white;
 }
 
-h1 {
-    color: wheat
-}
-
-h2 {
-    color: wheat
-}
-
-h3 {
-    color: wheat
-}
-
-h5 {
-    color: wheat
-}
-
-p {
-    color: wheat;
-}
 
 .navbar {
-    background-color: orange!important
+    background-color: white!important
 }
 
 hr{ 

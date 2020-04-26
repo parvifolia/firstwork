@@ -4,14 +4,15 @@
 <html>
     <head>
 
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-            <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
-            <script src="{% static 'js/jquery.min.js' %}"></script>
-            <script src="{% static 'js/bootstrap.min.js' %}"></script>
-            <title>parvifolia blog</title>
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <title>parvifolia blog</title>
+        
     </head>
 
 
@@ -26,9 +27,9 @@
     
         <br>
 
-        <div class="content container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-8 offset-2">
+                <div class="col-md-8 offset-md-2 col-10 offset-1">
 
                 {% block content %}
                 {% endblock %}
@@ -39,14 +40,13 @@
         </div>
 
         
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 offset-2"><p> Still working on it!</p></div>
-                    
-                <div class="col-md-2"><p>parvifolia blog | 2020</p></div>
-                    
-                
+                <div class="col-md-4 offset-md-2 col-11 offset-1"><p> Still working on it!</p></div>
+                <div class="col-md-4 offset-md-2 col-11 offset-1"><p> parvifolia | 2020 ®</p></div>
             </div>
+
+            
         </div>
 
     </body>
