@@ -3,7 +3,7 @@ personal blog
 <hr>
 online at:
 
-<h5>parvifolia.pythonanywhere.com</h5>
+<h5>tool.pythonanywhere.com/blog</h5>
 <hr>
 
 
